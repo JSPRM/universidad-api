@@ -9,10 +9,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Qualifier("repositorioEmpleados")
-public interface EmpleadoRepository extends PersonaRepository 
-{
+public interface EmpleadoRepository extends PersonaRepository {
 
-  @Query("select e from Empleado e where e.tipoEmpleado = ?1")
+  @Query("select a from Empleado a where a.tipoEmpleado = ?1")
   Iterable<Persona> findEmpleadoByTipoEmpleado(TipoEmpleado tipoEmpleado);
 
 }

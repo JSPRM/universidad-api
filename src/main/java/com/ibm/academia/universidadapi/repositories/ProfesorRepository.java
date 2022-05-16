@@ -8,11 +8,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Qualifier("repositorioProfesores")
-public interface ProfesorRepository extends PersonaRepository 
-{
+public interface ProfesorRepository extends PersonaRepository {
 
-  @Query("select p from Profesor p join fetch p.carreras c where c."
-  		+ "nombre = ?1")
+  @Query("select a from Profesor a join fetch a.carreras b where b." + "nombre = ?1")
   Iterable<Persona> findProfesoresByCarrera(String carrera);
 
 }

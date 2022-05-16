@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AulaRepository extends JpaRepository<Aula, Integer> {
   
-  Iterable<Aula> findAulasByPizarron(TipoPizarron pizarron);
+  Iterable<Aula> findAulasByTipoPizarron(TipoPizarron pizarron);
 
   Iterable<Aula> findAulasByPabellonNombre(String nombre);
 
