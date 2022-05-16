@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AulaMapper {
-  public AulaDTO mapAula(Aula aula){
+  public static AulaDTO mapAula(Aula aula){
     return new AulaDTO(
             aula.getId(),
             aula.getNumeroAula(),
